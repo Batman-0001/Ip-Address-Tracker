@@ -1,4 +1,4 @@
-import {mapping} from './leaflet.js';
+import {updateMap} from './leaflet.js';
 
 let x = 34.0614;
 let y = -118.0816;
@@ -34,6 +34,8 @@ async function callerIP(value, ip, loc, timezone, isp) {
         x = data.location.lat;
         y = data.location.lng;
 
+        updateMap(x, y);
+
         transpose(data, ip, loc, timezone, isp);
     }
     catch(err) {
@@ -54,6 +56,8 @@ async function callerDOM(value, ip, loc, timezone, isp) {
         x = data.location.lat;
         y = data.location.lng;
 
+        updateMap(x, y);
+
         transpose(data, ip, loc, timezone, isp);
     }
     catch(err) {
@@ -64,12 +68,12 @@ async function callerDOM(value, ip, loc, timezone, isp) {
 
 function transpose(data, ip, loc, timezone, isp) {
     ip.textContent = data.ip;
-    loc.textContent = `${data.location.city},${data.location.region}`;
+    loc.textContent = `${data.location.city} ${data.location.region}`;
     timezone.textContent = `${data.location.timezone}`;
     isp.textContent = data.isp;
 }
 
-mapping(x, y);
+
 
 
 
