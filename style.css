@@ -1,0 +1,113 @@
+:root {
+    --very-dark-grey: hsl(0, 0%, 17%);
+    --dark-grey: hsl(0, 0%, 59%);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Rubik';
+}
+
+main.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1.3fr 2fr;
+    position: relative;
+}
+
+section.search-data {
+    background-color: yellow;
+    height: 50%;
+    width: 80%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 8%;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    place-items: center;
+    div.header {
+        margin: 0;
+        padding: 0;
+    }
+    div.header h1 {
+        font-size: 2em;
+        color: white;
+        font-weight: 500;
+    }
+    div.search-box {
+        width: 40%;
+        height: 80%;
+        display: inline-block;
+    }
+    div.search-box input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-size: 18px;
+        padding: 3px 0 5px 1em;
+        border: none;
+        border-radius: 15px;
+    }
+    div.search-box div.search-button {
+        background-color: black;
+        background-image: url(./images/icon-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 20%;
+        height: 116%;
+        width: 13%;
+        position: relative;
+        top: -115%;
+        left: 95%;
+        border-radius: 0 15px 15px 0;
+    }
+
+    div.search-box div.search-button:hover {
+        background-color: var(--very-dark-grey);
+    }
+    div.output-data {
+        visibility: visible;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: white;
+        color: var(--very-dark-grey);
+        height: 60%;
+        border-radius: 15px;
+        padding-right: 10px;
+        width: 90%;
+        gap: 10%;
+        padding: 20px 20px 20px 20px;
+        
+        p:nth-child(1) {
+            font-size: 1em;
+            font-weight: 400;
+            margin: 0;
+        }
+        p:nth-child(2) {
+            font-size: 2em;
+            font-weight: 500;
+            margin: 5% 0 0 0;
+        }
+    }
+}
+
+section.background {
+    grid-row: 1/2;
+    background-image: url(./images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#map {
+    z-index: -1;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
