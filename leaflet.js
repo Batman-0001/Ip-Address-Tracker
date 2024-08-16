@@ -10,7 +10,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 var greenIcon = L.icon({
-    iconUrl: '/images/icon-location.svg',
+    iconUrl: './images/icon-location.svg',
 
     iconSize:     [38, 95],
     iconAnchor:   [22, 94], 
