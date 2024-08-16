@@ -69,7 +69,7 @@ async function callerDOM(value, ip, loc, timezone, isp) {
 function transpose(data, ip, loc, timezone, isp) {
     ip.textContent = data.ip;
     loc.textContent = `${data.location.city} ${data.location.region}`;
-    timezone.textContent = `${data.location.timezone}`;
+    timezone.textContent = `UTC${data.location.timezone}`;
     isp.textContent = data.isp;
 }
 
