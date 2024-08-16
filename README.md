@@ -14,12 +14,12 @@ An IP address tracker website uses HTML, CSS, and JavaScript to let users search
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/design/desktop-design.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Checkout The Source Code](https://github.com/Batman-0001/Ip-Address-Tracker)
+- Live Site URL: [Checkout The Live Project](https://your-live-site-url.com)
 
 ## My process
 
